@@ -10,9 +10,25 @@ function generateChart(){
                 {
                     //Amount
                     data: data.map((chart) =>chart.amount),
-                    backgroundColor:["hsl(10, 79%, 65%)"],    
+                    backgroundColor:[
+                        "hsl(10, 79%, 65%)",
+                        "hsl(10, 79%, 65%)",
+                        "hsl(186, 34%, 60%)",
+                        "hsl(10, 79%, 65%)",
+                        "hsl(10, 79%, 65%)",
+                        "hsl(10, 79%, 65%)",
+                        "hsl(10, 79%, 65%)",
+                    ],    
                     borderRadius: 5,
-                    hoverBackgroundColor:"hsl(186, 34%, 60%)",
+                    hoverBackgroundColor:[
+                        "hsl(10, 79%, 73%)",
+                        "hsl(10, 79%, 73%)",
+                        "hsl(186, 34%, 70%)",
+                        "hsl(10, 79%, 73%)",
+                        "hsl(10, 79%, 73%)",
+                        "hsl(10, 79%, 73%)",
+                        "hsl(10, 79%, 73%)",
+                    ],
                 }
                 ]
             }
@@ -23,7 +39,7 @@ function generateChart(){
                 scales:{
                     y: {
                         ticks:{
-                            display:false
+                            display:false,
                         },
                     grid: {
                         display: false,
@@ -39,12 +55,16 @@ function generateChart(){
                     }
                 },
                 plugins: {
-                    legend: {display:false},
+                    legend: {
+                        display:false,
+                    },
                     tooltip:{
                         yAlign:"bottom",
-                        displayColors: false,
+                        backgroundColor:"hsl(25, 47%, 15%)",
+                        caretSize: 0,
+                        titleMarginBottom:0,
                         callbacks:{
-                            title: titleTooltip,
+                            title:titleTooltip,
                             label:labelTooltip,
                         }
                     }
