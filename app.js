@@ -1,6 +1,6 @@
 function generateChart(){
     //Fetch data.json
-    fetch('./data.json')
+    fetch(`./data.json`)
         .then((res)=> res.json())
         .then((data) => {
             const info= {
